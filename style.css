@@ -1,0 +1,85 @@
+body {
+    background-color: #1e1e2e;
+    color: #cdd6f4;
+    font-family: "Noto Sans", sans-serif;
+    text-align: center;
+}
+.title {
+    font-size: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+.title2 {
+    font-size: 48px;
+}
+.logo {
+    width: 96px;
+    height: 96px;
+}
+.navlogo {
+    width: 64px;
+    height: 64px;
+    margin-top: 8px;
+    margin-left: -20px;
+}
+nav {
+    background-color: #181825;
+    border-style: solid;
+    border-color: #313244;
+    border-radius: 30px;
+    margin: 15px;
+    display: flex;
+    align-items: center;
+}
+nav a {
+    text-decoration: none;
+    color: #cdd6f4;
+    font-size: 28px;
+}
+.navitem {
+    margin-right: 8px;
+    margin-bottom: -6px;
+    width: 32px;
+    height: 32px;
+}
+.tabs {
+    position: absolute;
+    right: 10px;
+}
+li {
+    list-style-type: none;
+    display: inline-block;
+    margin-right: 25px;
+}
+.game {
+    background-color: #181825;
+    border-style: solid;
+    border-color: #313244;
+    border-radius: 30px;
+    margin: 15px;
+    width: 300px;
+    height: 300px;
+}
+.game2 {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: row;
+}
+.game-img {
+    width: 200px;
+    height: 200px;
+    margin-top: 20px;
+    border-style: solid;
+    border-color: #313244;
+    border-radius: 30px;
+}
+.game-txt {
+    margin-top: 4px;
+}
+a {
+    text-decoration: none;
+    color: #cdd6f4;
+}
