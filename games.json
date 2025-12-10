@@ -2,7 +2,7 @@
     {
         "name": "2048",
         "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/2048_logo.svg/1200px-2048_logo.svg.png",
-        "url": "https://hczhcz.github.io/2048/20ez/"
+        "url": "https://natleef1.github.io/2048/"
     },
     {
         "name": "Planet Life",
@@ -12,7 +12,7 @@
     {
         "name": "Coreball",
         "icon": "https://iogamesio.org/upload/imgs/favicon.png",
-        "url": "https://stopblockingsss.github.io/coreballa/"
+        "url": "https://natleef1.github.io/coreball/"
     },
     {
         "name": "Slope",
@@ -27,17 +27,17 @@
     {
         "name": "OvO 2",
         "icon": "https://izigames.net/uploads/2023/7/ovo-2.png",
-        "url": "https://mgalternative.github.io/b1178621-f4f3-4740-9214-ea982c3dab7c/content/dedragames.com/games/ovo2/0.2alpha/index.html"
+        "url": "https://natleef1.github.io/ovo-2/"
     },
     {
         "name": "OvO Dimensions",
         "icon": "https://cdn-1.webcatalog.io/catalog/poki-ovo-dimensions/poki-ovo-dimensions-icon-filled-256.webp?v=1714778225750",
-        "url": "https://unblocked76.github.io/ovo-3/"
+        "url": "https://natleef1.github.io/ovo-3-dimensions/"
     },
     {
         "name": "Wordle Unlimited",
         "icon": "https://static01.nyt.com/images/2022/03/02/crosswords/alpha-wordle-icon-new/alpha-wordle-icon-new-square320-v3.png?format=pjpg&quality=75&auto=webp&disable=upscale",
-        "url": "https://bosorioo.github.io/wordle-unlimited/"
+        "url": "https://natleef1.github.io/wordle-unlimited/"
     },
     {
         "name": "Meowy's Adventure",
@@ -162,7 +162,7 @@
     {
         "name": "House of Hazards",
         "icon": "https://houseofhazards.com/upload/imgs/house-of-hazards.jpg",
-        "url": "https://webglmath.github.io/house-of-hazards/"
+        "url": "https://natleef1.github.io/house-of-hazards/"
     },
     {
         "name": "Ping Pong Chaos",
@@ -321,27 +321,22 @@
     },
     {
         "name": "Funny Shooter",
-        "icon": "",
+        "icon": "https://m.media-amazon.com/images/I/41+GCaM3dcL.png",
         "url": "https://hilfig3rstorage.github.io/funny-shooter/"
     },
     {
         "name": "Funny Shooter 2",
-        "icon": "",
+        "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTu89WfgcvimDmqNCRj_r1VuNefSelu7lwaMg&s",
         "url": "https://natleef1.github.io/FunnyShooter2/"
     },
     {
         "name": "Epic Cube Duels",
-        "icon": "",
+        "icon": "https://m.media-amazon.com/images/I/81juK7qHcUL.png",
         "url": "https://hilfig3rstorage.github.io/FunnyShooter-2/"
     },
     {
         "name": "Bit Planes",
-        "icon": "",
+        "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7NySZOuBRzjDvla3cHwQPm2YehKLrPJk4q6WzmW6vvC4KHt26mzF3s7pAHCo5WZW3Lyw&usqp=CAU",
         "url": "https://medv.io/bit-planes/"
-    },
-    {
-        "name": "YoHoHo.io",
-        "icon": "https://play-lh.googleusercontent.com/4yqjsxq9ntZ2dftqxChXmsm-kZ293L6tBc8bghIFxvMn6T8v8jdGqld1CT_vuocU6g",
-        "url": "https://yohoho-io.net/"
     }
 ]
