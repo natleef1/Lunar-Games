@@ -58,28 +58,96 @@ li {
     border-style: solid;
     border-color: #313244;
     border-radius: 30px;
-    margin: 15px;
+    padding: 12px;
     width: 300px;
-    height: 300px;
+    height: 360px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
 }
 .game2 {
-    display: flex;
-    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 300px);
+    gap: 60px;
     justify-content: center;
-    flex-direction: row;
+    justify-items: center;
+    align-items: start;
+    padding: 24px;
+    margin: 0 auto;
 }
 .game-img {
-    width: 200px;
-    height: 200px;
-    margin-top: 20px;
+    width: 220px;
+    height: 220px;
+    object-fit: contain;
+    margin-top: 12px;
     border-style: solid;
     border-color: #313244;
-    border-radius: 30px;
+    border-radius: 20px;
+}
+
+/* Responsive: reduce columns on narrower screens so tiles resize uniformly */
+.media-queries-placeholder {}
+/* Keep 300px tiles on wide screens and downscale on smaller viewports so tiles still fit */
+@media (max-width: 1280px) {
+    .game { width: 260px; height: 300px; }
+    .game2 { grid-template-columns: repeat(auto-fill, 260px); gap:24px; }
+    .game-img { width: 190px; height: 190px; }
+}
+@media (max-width: 980px) {
+    .game { width: 220px; height: 280px; }
+    .game2 { grid-template-columns: repeat(auto-fill, 220px); gap:20px; }
+    .game-img { width: 170px; height: 170px; }
+}
+@media (max-width: 700px) {
+    .game { width: 180px; height: 230px; }
+    .game2 { grid-template-columns: repeat(auto-fill, 180px); gap:16px; }
+    .game-img { width: 140px; height: 140px; }
+}
+@media (max-width: 420px) {
+    .game { width: 150px; height: 200px; }
+    .game2 { grid-template-columns: repeat(auto-fill, 150px); gap:12px; }
+    .game-img { width: 110px; height: 110px; }
 }
 .game-txt {
-    margin-top: 4px;
+    margin-top: 8px;
+    height: calc(1.2em * 3);
+    line-height: 1.15em;
+    overflow: hidden;
+    text-align: center;
+    padding: 0 8px;
+    font-size: clamp(22px, 3.2vw, 30px);
+    font-weight: 700;
+    line-height: 1.2em;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    white-space: normal;
+    word-break: break-word;
 }
 a {
     text-decoration: none;
     color: #cdd6f4;
 }
+
+/* Search bar styles */
+.search-container{
+    display:flex;
+    justify-content:center;
+    padding: 8px 0 0;
+}
+.search-input{
+    width: min(720px, 92%);
+    max-width: 720px;
+    padding: 10px 14px;
+    border-radius: 20px;
+    border: 1px solid #313244;
+    background: #0f1116;
+    color: #cdd6f4;
+    font-size: 18px;
+    outline: none;
+    box-sizing: border-box;
+}
+.search-input::placeholder{ color: #8f9db0; }
+.search-input:focus{ box-shadow: 0 0 0 4px rgba(100,120,255,0.06); border-color: #4b5563; }

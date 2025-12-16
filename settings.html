@@ -23,10 +23,47 @@
     </nav>
     <main>
     <h1 class="title2">Settings</h1>
+    <div class="search-container">
+        <input id="settingSearch" class="search-input" type="search" placeholder="Search settings..." aria-label="Search settings">
+    </div>
+    <div class="game2" id="settingsList">
+        <noscript>
+            <p>Enable JavaScript to see the settings list.</p>
+        </noscript>
+    </div>
     </main>
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
     <script>
+    lucide.createIcons();
+    let allSettings = [];
+    async function loadSettings(){
+        try{
+            const res = await fetch('settings.json');
+            if(!res.ok) throw new Error('Could not load settings.json');
+            const items = await res.json();
+            items.sort((a,b)=> (a.name||'').localeCompare(b.name||'', undefined, {sensitivity: 'base'}));
+            allSettings = items;
+            renderSettings(allSettings);
+        }catch(e){ console.error(e); }
+    }
+    function renderSettings(list){
+        const container = document.getElementById('settingsList');
+        container.innerHTML = '';
+        if(!list || list.length===0){ const p=document.createElement('p'); p.textContent='No items found.'; p.style.color='#cdd6f4'; container.appendChild(p); return; }
+        list.forEach(s=>{
+            const item = document.createElement('div'); item.className='game';
+            const a = document.createElement('a'); a.href = s.url || '#';
+            const img = document.createElement('img'); img.className='game-img'; img.src = s.icon || '/media/logo.svg'; img.alt = s.name || 'setting';
+            const h = document.createElement('h1'); h.className='game-txt'; const u=document.createElement('u'); u.textContent = s.name||'Untitled'; h.appendChild(u);
+            a.appendChild(img); a.appendChild(h); item.appendChild(a); container.appendChild(item);
+        });
         lucide.createIcons();
-      </script>
+    }
+    document.addEventListener('DOMContentLoaded', ()=>{
+        loadSettings();
+        const s = document.getElementById('settingSearch');
+        if(s) s.addEventListener('input', e=>{ const q=(e.target.value||'').trim().toLowerCase(); if(!q) return renderSettings(allSettings); renderSettings(allSettings.filter(i=> (i.name||'').toLowerCase().includes(q))); });
+    });
+    </script>
 </body>
 </html>

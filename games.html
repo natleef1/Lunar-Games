@@ -23,43 +23,85 @@
     </nav>
     <main>
     <h1 class="title2">Games</h1>
-    <div class="game2">
-    <div class="game">
-        <a href="https://superteamxx.github.io/Subway-Surfers/">
-            <img src="/media/subway-surfers.jpg" class="game-img">
-            <h1 class="game-txt"><u>Subway Surfers</u></h1>
-        </a>
+    <div class="search-container">
+        <input id="gameSearch" class="search-input" type="search" placeholder="Search games..." aria-label="Search games">
     </div>
-    <div class="game">
-        <a href="https://incrediblewebsite.github.io/ovo/">
-            <img src="/media/ovo.png" class="game-img">
-            <h1 class="game-txt"><u>OvO 1.4.4</u></h1>
-        </a>
-    </div>
-    <div class="game">
-        <a href="https://unblocked76.github.io/getaway-shootout/">
-            <img src="/media/getaway-shootout.jpg" class="game-img">
-            <h1 class="game-txt"><u>Getaway Shootout</u></h1>
-        </a>
-    </div>
-    <div class="game">
-        <a href="https://unblocked76.github.io/the-final-earth/">
-            <img src="/media/the-final-earth.png" class="game-img">
-            <h1 class="game-txt"><u>The Final Earth</u></h1>
-        </a>
-    </div>
-    <div class="game">
-        <a href="https://unblocked76.github.io/the-final-earth-2/">
-            <img src="/media/the-final-earth-2.jpg" class="game-img">
-            <h1 class="game-txt"><u>The Final Earth 2</u></h1>
-        </a>
-    </div>
+    <div class="game2" id="gamesList">
+        <noscript>
+            <p>Enable JavaScript to see the games list.</p>
+        </noscript>
     </div>
 
     </main>
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
     <script>
+    lucide.createIcons();
+    let allGames = [];
+
+    async function loadGames(){
+        try{
+            const res = await fetch('games.json');
+            if(!res.ok) throw new Error('Could not load games.json');
+            const games = await res.json();
+            // sort alphabetically by name (case-insensitive)
+            games.sort((a,b)=> (a.name||'').localeCompare(b.name||'', undefined, {sensitivity: 'base'}));
+            allGames = games;
+            renderGames(allGames);
+        }catch(e){
+            console.error(e);
+        }
+    }
+
+    function renderGames(list){
+        const container = document.getElementById('gamesList');
+        container.innerHTML = '';
+        if(!list || list.length === 0){
+            const p = document.createElement('p');
+            p.textContent = 'No games found.';
+            p.style.color = '#cdd6f4';
+            container.appendChild(p);
+            return;
+        }
+        list.forEach(g=>{
+            const game = document.createElement('div');
+            game.className = 'game';
+
+            const a = document.createElement('a');
+            a.href = g.url || '#';
+            a.target = '_blank';
+            a.rel = 'noopener noreferrer';
+
+            const img = document.createElement('img');
+            img.className = 'game-img';
+            img.src = g.icon || '/media/logo.svg';
+            img.alt = g.name || 'game';
+
+            const h = document.createElement('h1');
+            h.className = 'game-txt';
+            const u = document.createElement('u');
+            u.textContent = g.name || 'Untitled';
+            h.appendChild(u);
+
+            a.appendChild(img);
+            a.appendChild(h);
+            game.appendChild(a);
+            container.appendChild(game);
+        });
         lucide.createIcons();
-      </script>
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        loadGames();
+        const search = document.getElementById('gameSearch');
+        if(search){
+            search.addEventListener('input', (e) => {
+                const q = (e.target.value || '').trim().toLowerCase();
+                if(!q) return renderGames(allGames);
+                const filtered = allGames.filter(g=> (g.name||'').toLowerCase().includes(q));
+                renderGames(filtered);
+            });
+        }
+    });
+    </script>
 </body>
 </html>
