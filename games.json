@@ -237,7 +237,7 @@
     {
         "name": "Tiny Fishing",
         "icon": "https://hyhygames.com/thumbs/tiny-fishing-game-thumb_2.webp",
-        "url": "https://purepro4561.github.io/Tiny-Fishing/"
+        "url": "https://natleef1.github.io/tiny-fishing/"
     },
     {
         "name": "Happy Glass",
@@ -273,6 +273,11 @@
         "name": "Tunnel Rush",
         "icon": "https://images.hellokids.com/_uploads/_tiny_galerie/20180415/vign-tunnel-rush-hk-w8v_u89.jpg",
         "url": "https://natleef1.github.io/TunnelRush/"
+    },
+    {
+        "name": "Tunnel Rush 2",
+        "icon": "",
+        "url": "https://natleef1.github.io/tunnel-rush-2/"
     },
     {
         "name": "Time Shooter",
@@ -358,5 +363,55 @@
         "name": "Vex 8",
         "icon": "https://www1.minijuegosgratis.com/v3/games/thumbnails/246839_7_sq.jpg",
         "url": "https://natleef1.github.io/vex-8/"
+    },
+    {
+        "name": "GunSpin",
+        "icon": "",
+        "url": "https://natleef1.github.io/gunspin/"
+    },
+    {
+        "name": "Eggy Car",
+        "icon": "",
+        "url": "https://natleef1.github.io/eggy-car/"
+    },
+    {
+        "name": "Cut the Rope",
+        "icon": "",
+        "url": "https://natleef1.github.io/cut-the-rope/"
+    },
+    {
+        "name": "Bloons TD 1",
+        "icon": "",
+        "url": "https://natleef1.github.io/bloons-tower-defense-1/"
+    },
+    {
+        "name": "Bloons TD 2",
+        "icon": "",
+        "url": "https://natleef1.github.io/bloons-td-2/"
+    },
+    {
+        "name": "Bloons TD 3",
+        "icon": "",
+        "url": "https://natleef1.github.io/BloonsTD3/"
+    },
+    {
+        "name": "Bloons TD 4",
+        "icon": "",
+        "url": "https://natleef1.github.io/btd4/"
+    },
+    {
+        "name": "Bloons TD 4 Expansion Tracks",
+        "icon": "",
+        "url": "https://natleef1.github.io/btd4-2/"
+    },
+    {
+        "name": "Bloons TD 5",
+        "icon": "",
+        "url": ""
+    },
+    {
+        "name": "Drive Mad",
+        "icon": "",
+        "url": "https://natleef1.github.io/drive-mad/"
     }
 ]
