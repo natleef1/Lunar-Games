@@ -23,10 +23,52 @@
     </nav>
     <main>
     <h1 class="title2">Apps</h1>
+    <div class="search-container">
+        <input id="appSearch" class="search-input" type="search" placeholder="Search apps..." aria-label="Search apps">
+    </div>
+    <div class="game2" id="appsList">
+        <noscript>
+            <p>Enable JavaScript to see the apps list.</p>
+        </noscript>
+    </div>
+    
     </main>
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
     <script>
+    lucide.createIcons();
+    let allApps = [];
+    async function loadApps(){
+        try{
+            const res = await fetch('apps.json');
+            if(!res.ok) throw new Error('Could not load apps.json');
+            const apps = await res.json();
+            apps.sort((a,b)=> (a.name||'').localeCompare(b.name||'', undefined, {sensitivity: 'base'}));
+            allApps = apps;
+            renderApps(allApps);
+        }catch(e){
+            console.error(e);
+        }
+    }
+    function renderApps(list){
+        const container = document.getElementById('appsList');
+        container.innerHTML = '';
+        if(!list || list.length === 0){
+            const p = document.createElement('p'); p.textContent = 'No apps found.'; p.style.color = '#cdd6f4'; container.appendChild(p); return;
+        }
+        list.forEach(app=>{
+            const item = document.createElement('div'); item.className='game';
+            const a = document.createElement('a'); a.href = app.url || '#'; a.target='_blank'; a.rel='noopener noreferrer';
+            const img = document.createElement('img'); img.className='game-img'; img.src = app.icon || '/media/logo.svg'; img.alt = app.name || 'app';
+            const h = document.createElement('h1'); h.className='game-txt'; const u = document.createElement('u'); u.textContent = app.name||'Untitled'; h.appendChild(u);
+            a.appendChild(img); a.appendChild(h); item.appendChild(a); container.appendChild(item);
+        });
         lucide.createIcons();
-      </script>
+    }
+    document.addEventListener('DOMContentLoaded', ()=>{
+        loadApps();
+        const s = document.getElementById('appSearch');
+        if(s) s.addEventListener('input', e=>{ const q=(e.target.value||'').trim().toLowerCase(); if(!q) return renderApps(allApps); renderApps(allApps.filter(a=> (a.name||'').toLowerCase().includes(q))); });
+    });
+    </script>
 </body>
 </html>

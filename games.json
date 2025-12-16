@@ -185,11 +185,6 @@
         "url": "https://lekug.github.io/tn6pS9dCf37xAhkJv/"
     },
     {
-        "name": "Pre-Civilization Bronze Age",
-        "icon": "",
-        "url": ""
-    },
-    {
         "name": "Slope 2",
         "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUTNTwBmIWeVyW9eTu58kwZ5klEylGNq7BM0XwG1srX_HlIGismHzjMKTeoMF5s07PJvo&usqp=CAU",
         "url": "https://unblocked76.github.io/slope-2/"
@@ -258,16 +253,6 @@
         "name": "Grindcraft",
         "icon": "https://static.keygames.com/5/93275/51946/1024x1024/grindcraft.webp",
         "url": "https://mirathecat.github.io/grindcraft/index.html"
-    },
-    {
-        "name": "CircloO",
-        "icon": "https://www.speedrun.com/static/game/lde372e6/cover.png?v=65be272",
-        "url": ""
-    },
-    {
-        "name": "CircloO 2",
-        "icon": "https://www.coolmathgames.com/sites/default/files/circloo-2-game-icon.png",
-        "url": ""
     },
     {
         "name": "Tunnel Rush",
@@ -366,52 +351,52 @@
     },
     {
         "name": "GunSpin",
-        "icon": "",
+        "icon": "https://static.keygames.com/4/113974/98896/1024x1024/gunspin.webp",
         "url": "https://natleef1.github.io/gunspin/"
     },
     {
         "name": "Eggy Car",
-        "icon": "",
+        "icon": "https://eggycar76.io/data/image/game/eggy-car.png",
         "url": "https://natleef1.github.io/eggy-car/"
     },
     {
         "name": "Cut the Rope",
-        "icon": "",
+        "icon": "https://upload.wikimedia.org/wikipedia/en/thumb/6/66/Cut_the_Rope_%28App_icon%29.png/250px-Cut_the_Rope_%28App_icon%29.png",
         "url": "https://natleef1.github.io/cut-the-rope/"
     },
     {
         "name": "Bloons TD 1",
-        "icon": "",
+        "icon": "https://imgs.crazygames.com/auto-covers/bloons-tower-defense_1x1.jpg?format=auto&quality=70&metadata=none",
         "url": "https://natleef1.github.io/bloons-tower-defense-1/"
     },
     {
         "name": "Bloons TD 2",
-        "icon": "",
+        "icon": "https://www.bloonswiki.com/images/1/10/B2M_Icon.png",
         "url": "https://natleef1.github.io/bloons-td-2/"
     },
     {
         "name": "Bloons TD 3",
-        "icon": "",
+        "icon": "https://bloonstowerdefense.io/upload/imgs/bloons-tower-defense-3-logo.png",
         "url": "https://natleef1.github.io/BloonsTD3/"
     },
     {
         "name": "Bloons TD 4",
-        "icon": "",
+        "icon": "https://static.wikia.nocookie.net/b__/images/3/38/BTD_4_iOS_icon.png/revision/latest?cb=20230317191759&path-prefix=bloons",
         "url": "https://natleef1.github.io/btd4/"
     },
     {
         "name": "Bloons TD 4 Expansion Tracks",
-        "icon": "",
+        "icon": "https://imgs.crazygames.com/auto-covers/bloons-tower-defense-4-expansion_1x1.png?format=auto&quality=70&metadata=none",
         "url": "https://natleef1.github.io/btd4-2/"
     },
     {
         "name": "Bloons TD 5",
-        "icon": "",
+        "icon": "https://play-lh.googleusercontent.com/LLEUf9Qcd6N2L4nynBArv7wHyvPLiKBJtXjFEfgD4yS80ZJtQREVjIJE_HXFRDAJxQ=w240-h480-rw",
         "url": ""
     },
     {
         "name": "Drive Mad",
-        "icon": "",
+        "icon": "https://gamefan.io/wp-content/uploads/thumbs/custom/D/Drive-Mad-.webp",
         "url": "https://natleef1.github.io/drive-mad/"
     }
 ]
